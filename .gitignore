@@ -1,0 +1,16 @@
+# Ignore Obsidian system folder
+.obsidian/
+
+# Ignore workspace settings
+.obsidian/workspace.json
+
+# Ignore cache and temp files
+.obsidian/cache/
+.obsidian/plugins/obsidian-dataview/cache.json
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore OneDrive sync metadata
+desktop.ini
