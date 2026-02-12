@@ -1,6 +1,4 @@
-// =====================
 // Data Layer
-// =====================
 
 const questions = [
   {
@@ -8,66 +6,25 @@ const questions = [
     answer: "4",
   },
   {
-    question: "What is the capital of France?",
-    answer: "paris",
+    question: "What is your name?",
+    answer: "My name is Javier",
   },
   {
-    question: "Which language runs in a web browser?",
-    answer: "javascript",
+    question: "What is the capital of Spain?",
+    answer: "Madrid",
   },
 ];
 
-// =====================
-// Logic + Output Layer
-// =====================
+// Logic Layer
 
-function askQuestion(questionObj) {
-  const userAnswer = prompt(questionObj.question); // string or null
-  if (userAnswer === null) {
-    return ""; // treat cancel as empty answer
-  }
-  return userAnswer.trim().toLowerCase();
-}
+console.log(questions.length); // questions is an array of objects...length it does work...
 
-function checkAnswer(userAnswer, correctAnswer) {
-  return userAnswer === correctAnswer.toLowerCase();
-}
+// function runQuiz() {
+//   let score = 0;
+//   for (let i = 0; i < questions.length; i++) {
+//     console.log("Asking questions:", questions[i].question);
+//   }
+//   console.log("runQuiz was called");
+// }
 
-function showFinalScore(score, total) {
-  console.log("------------------------");
-  console.log(`Your final score: ${score} / ${total}`);
-
-  const percentage = (score / total) * 100;
-  console.log(`Percentage: ${percentage}%`);
-
-  if (percentage >= 70) {
-    console.log("Result: Pass ✅");
-  } else {
-    console.log("Result: Fail ❌");
-  }
-}
-
-function runQuiz() {
-  let score = 0;
-
-  for (let i = 0; i < questions.length; i++) {
-    const currentQuestion = questions[i];
-    const userAnswer = askQuestion(currentQuestion);
-
-    if (checkAnswer(userAnswer, currentQuestion.answer)) {
-      console.log("Correct!");
-      score++;
-    } else {
-      console.log(
-        `Incorrect. The correct answer was: ${currentQuestion.answer}`,
-      );
-    }
-
-    console.log(""); // blank line for readability
-  }
-
-  showFinalScore(score, questions.length);
-}
-
-// Start the quiz
-runQuiz();
+// runQuiz();
